@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CART.AI</title>
+
+<link rel="stylesheet" href="./css/dashboard.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="container nav-flex">
+        <h2 class="logo">CART.AI</h2>
+
+        <div class="nav-right">
+            <span id="username"></span>
+            <span onclick="window.location.href='orders.html'" class="nav-link">
+                My Orders
+            </span>
+            <span onclick="window.location.href='cart.html'" class="nav-link">
+                Cart
+            </span>
+            <button onclick="logout()" class="btn-outline">Logout</button>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="overlay">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Luxury Saree Collection</h1>
+                <p>Elegance that defines tradition & style</p>
+                <button onclick="scrollToProducts()" class="btn-primary">Shop Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORY -->
+<section class="section">
+    <div class="container">
+        <h2>Shop by Category</h2>
+
+        <div class="category-grid">
+            <div class="category-card" onclick="openCategory('Silk')">
+                <img src="./images/d-silk-sarees.jpg">
+                <p>Silk Sarees</p>
+            </div>
+
+            <div class="category-card" onclick="openCategory('Cotton')">
+                <img src="./images/d-cotton-sarees.jpg">
+                <p>Cotton Sarees</p>
+            </div>
+
+            <div class="category-card" onclick="openCategory('Designer')">
+                <img src="./images/d-designer-sarees.jpg">
+                <p>Designer Sarees</p>
+            </div>
+
+            <div class="category-card" onclick="openCategory('Handloom')">
+                <img src="./images/d-handloom-sarees.jpg">
+                <p>Handloom Sarees</p>
+            </div>
+
+            <div class="category-card" onclick="openCategory('Printed')">
+                <img src="./images/d-printed-sarees.jpg">
+                <p>Printed Sarees</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CAROUSEL (BOX STYLE) -->
+<section class="section">
+    <div class="container">
+        <h2>Featured Collections</h2>
+
+        <div class="carousel-box">
+            <div class="carousel-track-box" id="carouselTrack">
+
+                <img src="./images/banner1.jpg">
+                <img src="./images/banner2.jpg">
+                <img src="./images/banner3.jpg">
+                <img src="./images/banner4.jpg">
+                <img src="./images/banner5.jpg">
+                <img src="./images/banner6.jpg">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+    <div class="container">
+        <h2>Trending Sarees</h2>
+        <div class="product-grid" id="productContainer"></div>
+    </div>
+</section>
+
+<!-- MID BANNER -->
+<section class="section">
+    <div class="container mid-banner">
+        <div class="banner-box">
+            <h2>Festive Collection</h2>
+            <p>Upto 40% OFF</p>
+        </div>
+
+        <div class="banner-box dark">
+            <h2>Wedding Special</h2>
+            <p>Exclusive Designer Sarees</p>
+        </div>
+    </div>
+</section>
+
+<!-- TRUST -->
+<section class="section">
+    <div class="container trust">
+        <div>🚚 Free Delivery</div>
+        <div>💯 Original Products</div>
+        <div>🔄 Easy Returns</div>
+        <div>💳 Secure Payment</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div>
+            <h3>CART.AI</h3>
+            <p>Premium sarees for every occasion.</p>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <p onclick="goToTop()" style="cursor:pointer;">Home</p>
+            <p onclick="scrollToProducts()" style="cursor:pointer;">Shop</p>
+        </div>
+
+        <div>
+            <h4>Support</h4>
+            <p>Help Center</p>
+            <p>Returns</p>
+        </div>
+    </div>
+
+    <p class="copy">© 2026 CART.AI</p>
+</footer>
+<button id="topBtn" onclick="goToTop()">↑</button>
+<script src="./js/dashboard.js"></script>
+</body>
+</html>

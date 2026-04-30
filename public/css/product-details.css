@@ -1,0 +1,159 @@
+body {
+    font-family: Poppins;
+    background: #f5f5f7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* LAYOUT */
+.product-layout {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+/* IMAGE */
+.image-section {
+    flex: 1;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.main-image img {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.main-image:hover img {
+    transform: scale(1.2);
+}
+
+/* THUMBNAILS */
+.thumb {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumb img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* INFO */
+.info {
+    flex: 1;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.discount {
+    color: green;
+    font-weight: 500;
+}
+
+/* QTY */
+.qty {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.qty button {
+    padding: 8px 12px;
+}
+
+.qty span {
+    padding: 8px 15px;
+    background: #eee;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 12px 20px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.cart-btn {
+    background: #7c3aed;
+    color: white;
+}
+
+.buy-btn {
+    background: black;
+    color: white;
+}
+
+/* DETAILS */
+.details-box {
+    margin-top: 20px;
+}
+
+.details-box ul {
+    padding-left: 20px;
+}
+
+/* RELATED */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,250px));
+    gap: 50px;
+    justify-content: center;
+}
+.product-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.3s;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+}
+
+/* TEXT FIX */
+.product-card p {
+    margin: 10px;
+    font-size: 14px;
+}
+
+.product-card b {
+    margin: 0 10px 10px;
+    display: block;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart</title>
+
+<link rel="stylesheet" href="./css/cart.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Your Cart 🛒</h1>
+
+    <div class="cart-layout">
+
+        <!-- LEFT -->
+        <div id="cartContainer" class="cart-items"></div>
+
+        <!-- RIGHT SUMMARY -->
+        <div class="summary-box">
+            <h3>Order Summary</h3>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span>₹<span id="subtotal">0</span></span>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery</span>
+                <span class="free">FREE</span>
+            </div>
+
+            <hr>
+
+            <div class="summary-row total">
+                <span>Total</span>
+                <span>₹<span id="total">0</span></span>
+            </div>
+
+            <button onclick="goCheckout()" class="checkout-btn">
+                Proceed to Checkout →
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="./js/cart.js"></script>
+</body>
+</html>

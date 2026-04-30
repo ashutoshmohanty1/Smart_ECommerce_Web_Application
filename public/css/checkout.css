@@ -1,0 +1,110 @@
+body {
+    font-family: Poppins;
+    background: #f5f5f7;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+.checkout-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.form, .summary {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+}
+
+.form {
+    flex: 2;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #7c3aed;
+    color: white;
+    border: none;
+}
+
+
+.payment {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payment label {
+    cursor: pointer;
+}
+
+.summary {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    position: sticky;
+    top: 20px;
+}
+
+.summary div {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px;
+    background: linear-gradient(135deg,#7c3aed,#9333ea);
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+/* ORDER SUMMARY FIX */
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.item-row p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.item-row span {
+    color: gray;
+    font-size: 13px;
+}
+
+
+.payment-single {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    font-weight: 500;
+}
