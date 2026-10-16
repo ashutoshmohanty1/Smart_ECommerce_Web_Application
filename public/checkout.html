@@ -1,69 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Checkout</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Checkout</title>
+        <link rel="stylesheet" href="./css/checkout.css">
+    </head>
 
-<link rel="stylesheet" href="./css/checkout.css">
-</head>
+    <body>
+        <div class="container">
+            <h2>Checkout</h2>
 
-<body>
+            <div class="checkout-layout">
+                <div class="form">
+                    <h3>Shipping Details</h3>
+                    <input id="name" placeholder="Full Name">
+                    <input id="phone" placeholder="Phone Number">
+                    <input id="address" placeholder="Address">
+                    <input id="city" placeholder="City">
+                    <input id="pincode" placeholder="Pincode">
+                    <h3>Payment Method</h3>
+                    <div class="payment-single">
+                        <input type="radio" checked>
+                        <label>Cash on Delivery (COD)</label>
+                    </div>
+                    <!-- UPI BOX -->
+                    <input id="upiBox" placeholder="Enter UPI ID (example@upi)" style="display:none">
 
-<div class="container">
+                    <!-- CARD BOX -->
+                    <div id="cardBox" style="display:none">
+                        <input placeholder="Card Number">
+                        <input placeholder="Expiry">
+                        <input placeholder="CVV">
+                    </div>
 
-<h2>Checkout</h2>
-
-<div class="checkout-layout">
-
-    <!-- LEFT -->
-    <div class="form">
-
-        <h3>Shipping Details</h3>
-
-        <input id="name" placeholder="Full Name">
-        <input id="phone" placeholder="Phone Number">
-        <input id="address" placeholder="Address">
-        <input id="city" placeholder="City">
-        <input id="pincode" placeholder="Pincode">
-
-        <h3>Payment Method</h3>
-
-        <div class="payment-single">
-            <input type="radio" checked>
-            <label>Cash on Delivery (COD)</label>
+                    <button onclick="placeOrder()">Place Order</button>
+                </div>
+                <!-- RIGHT -->
+                <div class="summary">
+                    <h3>Order Summary</h3>
+                    <div id="items"></div>
+                    <hr>
+                    <h2>Total: ₹<span id="total"></span></h2>
+                </div>
+            </div>
         </div>
 
-        <!-- UPI BOX -->
-        <input id="upiBox" placeholder="Enter UPI ID (example@upi)" style="display:none">
-
-        <!-- CARD BOX -->
-        <div id="cardBox" style="display:none">
-            <input placeholder="Card Number">
-            <input placeholder="Expiry">
-            <input placeholder="CVV">
-        </div>
-
-        <button onclick="placeOrder()">Place Order</button>
-
-    </div>
-
-    <!-- RIGHT -->
-    <div class="summary">
-
-        <h3>Order Summary</h3>
-
-        <div id="items"></div>
-
-        <hr>
-
-        <h2>Total: ₹<span id="total"></span></h2>
-
-    </div>
-
-</div>
-
-</div>
-
-<script src="./js/checkout.js"></script>
-</body>
+        <script src="./js/checkout.js"></script>
+    </body>
 </html>
