@@ -1,18 +1,12 @@
 const id = new URLSearchParams(location.search).get("id");
-
 let qty = 1;
 
 fetch("http://localhost:3000/products")
 .then(res => res.json())
 .then(data => {
-
     const p = data.find(x => x.id == id);
-
-    // FAKE EXTRA IMAGES (for demo)
     const images = [p.image, p.image, p.image];
-
     document.getElementById("productDetails").innerHTML = `
-    
     <div class="image-section">
         <div class="main-image">
             <img id="mainImg" src="./${p.image}">
@@ -27,7 +21,6 @@ fetch("http://localhost:3000/products")
 
     <div class="info">
         <h2>${p.name}</h2>
-
         <p class="price">₹${p.price}</p>
         <p>
             <span class="old-price">₹${p.price + 500}</span>
@@ -68,9 +61,7 @@ fetch("http://localhost:3000/products")
     </div>
     `;
 
-    // RELATED
     const related = data.filter(x => x.category === p.category && x.id != p.id);
-
     document.getElementById("relatedProducts").innerHTML =
         related.map(p => `
             <div class="product-card" onclick="openDetails(${p.id})">
@@ -79,7 +70,6 @@ fetch("http://localhost:3000/products")
                 <b>₹${p.price}</b>
             </div>
         `).join("");
-
 });
 
 function buyNow(id){
@@ -100,19 +90,15 @@ function changeQty(val){
 
 function addToCart(id){
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
     const existing = cart.find(x => x.id == id);
-
     if(existing){
         existing.qty += qty;
     } else {
         cart.push({id, qty});
     }
-
     localStorage.setItem("cart", JSON.stringify(cart));
     alert("Added to cart!");
 }
-
 function openDetails(id){
     window.location.href = `product-details.html?id=${id}`;
 }

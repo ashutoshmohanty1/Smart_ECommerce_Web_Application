@@ -1,5 +1,4 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
 let products = [];
 
 fetch("http://localhost:3000/products")
@@ -10,18 +9,12 @@ fetch("http://localhost:3000/products")
 });
 
 function loadSummary(){
-
     let total = 0;
-
     const itemsDiv = document.getElementById("items");
-
     itemsDiv.innerHTML = cart.map(item => {
-
         const p = products.find(x => x.id == item.id);
         const price = p.price * item.qty;
-
         total += price;
-
         return `
             <div class="item-row">
                 <p>${p.name} <span>x ${item.qty}</span></p>
@@ -29,14 +22,12 @@ function loadSummary(){
             </div>
         `;
     }).join("");
-
     document.getElementById("total").innerText = total;
 }
 
 /* PAYMENT SWITCH */
 document.querySelectorAll("input[name='pay']").forEach(el => {
     el.addEventListener("change", () => {
-
         document.getElementById("upiBox").style.display = "none";
         document.getElementById("cardBox").style.display = "none";
 
@@ -47,13 +38,11 @@ document.querySelectorAll("input[name='pay']").forEach(el => {
         if(el.value === "card"){
             document.getElementById("cardBox").style.display = "block";
         }
-
     });
 });
 
 /* PLACE ORDER */
 function placeOrder(){
-
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
 
@@ -72,10 +61,7 @@ function placeOrder(){
     };
 
     orders.push(newOrder);
-
     localStorage.setItem("orders", JSON.stringify(orders));
-
     localStorage.removeItem("cart");
-
     window.location.href = "order-success.html";
 }

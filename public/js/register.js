@@ -19,15 +19,11 @@ document.getElementById("registerForm").addEventListener("submit", async functio
             },
             body: JSON.stringify({ name, email, password })
         });
-
         const data = await response.json();
-
         alert(data.message);
-
         if (data.message === "Registration successful") {
             window.location.href = "login.html";
         }
-
     } catch (error) {
         console.error("Error:", error);
         alert("Server error. Please try again.");
